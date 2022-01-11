@@ -30,7 +30,7 @@
    &trans &trans &kp LG(N0)   &kp E     &kp W    &kp LSHFT                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
                                   &kp LGUI &kp LALT &mo LOWER                      &mo RAISE &lt LOWER SPACE &kp LGUI
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LBKT) LC(RBKT)>;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(RBKT) LC(LBKT)>;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
@@ -44,7 +44,7 @@
    &trans &trans &trans     &kp R     &kp T    &kp S                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
                                       &kp M &kp V &trans                       &mo RAISE &lt LOWER SPACE &kp LGUI
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LBKT) LC(RBKT)>;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(RBKT) LC(LBKT)>;
                 };
 
                 raise_layer {

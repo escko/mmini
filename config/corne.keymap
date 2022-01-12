@@ -11,7 +11,7 @@
 #define GREEN   3
 
 &left_encoder { resolution = <2>; };
-&left1_encoder { resolution = <4>; };
+&left1_encoder { resolution = <2>; };
 // &right_encoder { resolution = <1>; };
 
 

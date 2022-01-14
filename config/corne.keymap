@@ -8,7 +8,8 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
-#define GREEN   3
+#define ORANG   3
+#define GREEN   4
 
 &left_encoder { resolution = <2>; };
 &left1_encoder { resolution = <2>; };
@@ -26,12 +27,12 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &trans &trans &trans       &mo RAISE &kp LBKT &kp RBKT                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
-   &trans &trans &trans       &kp E     &kp B    &kp LSHFT                  &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
-   &trans &trans &trans       &kp Z     &kp X    &kp LA(N0)                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
-                                  &mo LOWER &kp LGUI &kp LALT                      &mo RAISE &lt LOWER SPACE &kp LGUI
+   &trans &trans &trans       &lt RAISE L &kp LBKT &kp RBKT                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
+   &trans &trans &trans       &lt LOWER B &kp E    &kp LSHFT                  &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
+   &trans &trans &trans       &kp S       &kp V    &kp LA(N0)                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
+                                          &lt ORANG M &kp LGUI &kp LALT                      &mo RAISE &lt LOWER SPACE &kp LGUI
                         >;
-                        sensor-bindings = <&inc_dec_kp LC(LBKT) LC(RBKT) &inc_dec_kp LBKT RBKT>;
+                        sensor-bindings = <&inc_dec_kp LBKT RBKT &inc_dec_kp LC(LBKT) LC(RBKT)>;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
@@ -40,12 +41,12 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans &trans &trans     &mo L  &kp I  &kp A                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
-   &trans &trans &trans     &kp R  &kp T  &kp S                 &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
+   &trans &trans &trans     &mo N  &kp G  &kp P                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
+   &trans &trans &trans     &trans  &kp R  &kp A                 &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
    &trans &trans &trans     &trans &trans &trans                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
-                                      &trans &kp M &kp V                       &mo RAISE &lt LOWER SPACE &kp LGUI
+                                      &kp Y &kp M &kp I                       &mo RAISE &lt LOWER SPACE &kp LGUI
                         >;
-                        sensor-bindings = <&inc_dec_kp LC(LBKT) LC(RBKT) &inc_dec_kp LBKT RBKT>;
+                        sensor-bindings = <&inc_dec_kp LBKT RBKT &inc_dec_kp LC(LBKT) LC(RBKT)>;
                 };
                 raise_layer {
 // -----------------------------------------------------------------------------------------
@@ -54,12 +55,26 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |  ~   | // TODO: Fix this row when &mkp is committed
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans &trans &trans     &trans       &kp Y  &kp U                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
-   &trans &trans &trans     &kp LS(LGUI) &trans &kp D                  &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
-   &trans &trans &trans     &trans       &trans &mo GREEN                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
-                                      &kp N0 &kp P &kp N4                      &mo RAISE &lt LOWER SPACE &kp LGUI
+   &trans &trans &trans     &trans       &kp X  &kp U                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
+   &trans &trans &trans     &kp COLON &kp T &kp F                 &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
+   &trans &trans &trans     &kp D       &kp COMMA &mo GREEN                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
+                                      &kp N0 &kp Z &kp SLASH                      &mo RAISE &lt LOWER SPACE &kp LGUI
                         >;
-                        sensor-bindings = <&inc_dec_kp LC(LBKT) LC(RBKT) &inc_dec_kp LBKT RBKT>;
+                        sensor-bindings = <&inc_dec_kp LBKT RBKT &inc_dec_kp LC(LBKT) LC(RBKT)>;
+                };
+                orang_layer {
+// -----------------------------------------------------------------------------------------
+// |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |  ~   | // TODO: Fix this row when &mkp is committed
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &trans &trans &trans     &kp LG(X) &kp LG(C) &kp LG(V)                   &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
+   &trans &trans &trans     &trans    &trans    &trans                  &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
+   &trans &trans &trans     &kp SLASH &trans    &trans                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
+                                      &trans &trans &trans                      &mo RAISE &lt LOWER SPACE &kp LGUI
+                        >;
+                        sensor-bindings = <&inc_dec_kp LBKT RBKT>;
                 };
                 green_layer {
 // -----------------------------------------------------------------------------------------

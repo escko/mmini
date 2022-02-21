@@ -12,8 +12,16 @@
 #define GREEN   4
 
 &left_encoder { resolution = <2>; };
-&left1_encoder { resolution = <3>; };
+&left1_encoder { resolution = <4>; };
 // &right_encoder { resolution = <1>; };
+
+&mt {
+    tapping-term-ms = <135>;
+};
+
+&lt {
+    tapping-term-ms = <135>;
+};
 
 
 / {

@@ -12,7 +12,7 @@
 #define GREEN   4
 
 &left_encoder { resolution = <2>; };
-&left1_encoder { resolution = <2>; };
+&left1_encoder { resolution = <3>; };
 // &right_encoder { resolution = <1>; };
 
 
@@ -27,10 +27,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &trans &trans &trans       &lt RAISE L &kp LBKT &kp RBKT                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
-   &trans &trans &trans       &lt LOWER B &kp E    &kp LSHFT                  &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
-   &trans &trans &trans       &kp S       &kp V    &kp LA(N0)                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
-                                          &lt ORANG M &kp LGUI &kp LALT                      &mo RAISE &lt LOWER SPACE &kp LGUI
+   &trans &trans &trans       &lt RAISE L &mt LSHIFT LBKT &mt LGUI RBKT                           &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
+   &trans &trans &trans       &lt LOWER W &kp E    &kp S                                          &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
+   &trans &trans &trans       &kp R       &kp T    &kp LA(N1)                                     &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
+                                &lt ORANG M &kp LGUI &kp LALT                                     &mo RAISE &lt LOWER SPACE &kp LGUI
                         >;
                         sensor-bindings = <&inc_dec_kp LBKT RBKT &inc_dec_kp LC(LBKT) LC(RBKT)>;
                 };
@@ -41,10 +41,10 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans &trans &trans     &mo N  &kp G  &kp P                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
-   &trans &trans &trans     &trans  &kp R  &kp A                 &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
+   &trans &trans &trans     &mo N  &kp V  &kp P                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
+   &trans &trans &trans     &trans  &kp F  &kp A                 &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
    &trans &trans &trans     &trans &trans &trans                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
-                                      &kp Y &kp M &kp I                       &mo RAISE &lt LOWER SPACE &kp LGUI
+                            &kp Y &kp M &kp I                       &mo RAISE &lt LOWER SPACE &kp LGUI
                         >;
                         sensor-bindings = <&inc_dec_kp LBKT RBKT &inc_dec_kp LC(LBKT) LC(RBKT)>;
                 };
@@ -55,10 +55,10 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |  ~   | // TODO: Fix this row when &mkp is committed
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans &trans &trans     &trans       &kp X  &kp U                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
-   &trans &trans &trans     &kp COLON &kp T &kp F                 &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
-   &trans &trans &trans     &kp D       &kp COMMA &mo GREEN                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
-                                      &kp N0 &kp Z &kp SLASH                      &mo RAISE &lt LOWER SPACE &kp LGUI
+   &trans &trans &trans     &trans &kp X  &kp U                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
+   &trans &trans &trans     &kp K  &kp T &kp F                 &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
+   &trans &trans &trans     &kp D  &kp COMMA &mo GREEN                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
+                                &kp N0 &kp Z &kp SLASH                      &mo RAISE &lt LOWER SPACE &kp LGUI
                         >;
                         sensor-bindings = <&inc_dec_kp LBKT RBKT &inc_dec_kp LC(LBKT) LC(RBKT)>;
                 };

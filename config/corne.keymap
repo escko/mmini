@@ -63,7 +63,7 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |  ~   | // TODO: Fix this row when &mkp is committed
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans &trans &trans     &trans &kp X  &kp U                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
+   &trans &trans &trans     &trans &kp C  &kp U                  &kp Z &kp U  &kp I    &kp O   &kp P    &kp BKSP
    &trans &trans &trans     &kp K  &kp T &kp F                 &kp H &kp J  &kp K    &kp L   &kp APOS &kp RET
    &trans &trans &trans     &kp D  &kp COMMA &mo GREEN                            &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp DQT
                                 &kp N0 &kp Z &kp SLASH                      &mo RAISE &lt LOWER SPACE &kp LGUI
